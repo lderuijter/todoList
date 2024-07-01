@@ -17,10 +17,14 @@
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="relative flex items-top justify-center bg-gray-100 py-4 text-black/50 dark:bg-black dark:text-white/50">
-            <div>
+            <div style="color: white">
                 <h1 style="font-size: 30px">todo list</h1>
-                <label for="listItem">New Todo Item</label><br>
-                <input style="color: black" type="text" name="listItem">
+                <form method="post" action="" accept-charset="UTF-8">
+                    {{ csrf_field() }}
+                    <label for="listItem">New Todo Item</label><br>
+                    <input style="color: black" type="text" name="listItem">
+                    <button type="submit">Save Item</button>
+                </form>
             </div>
         </div>
     </body>
